@@ -1,9 +1,11 @@
 name: Manual Dispatch Workflow
 
 on:
-  push:
-    branches:
-     - poc
+  workflow_dispatch:
+    inputs:
+      commit_id:
+        description: 'Commit ID'
+        required: true
 
 jobs:
   print_commit_id:
